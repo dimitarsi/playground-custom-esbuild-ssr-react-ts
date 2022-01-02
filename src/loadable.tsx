@@ -11,7 +11,7 @@ export function loadable(promise: Promise<any>) {
   promise.then((component) => {
     resolve = () => ({
       done: true,
-      result: component,
+      result: component.default,
     });
     loadable.tasks--;
 
@@ -21,7 +21,7 @@ export function loadable(promise: Promise<any>) {
       }
     }, 0);
 
-    return component;
+    return component.default;
   });
 
   return class extends React.Component<
@@ -34,7 +34,7 @@ export function loadable(promise: Promise<any>) {
       promise.then((component) => {
         this.setState({
           done: true,
-          result: component,
+          result: component.default,
         });
       });
     }
