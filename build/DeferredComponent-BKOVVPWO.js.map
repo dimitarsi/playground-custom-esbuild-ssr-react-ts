@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../src/DeferredComponent.tsx"],
-  "sourcesContent": ["import React, { useState } from \"react\";\n\nexport default function DeferComponent() {\n  const [text, setText] = useState(\"Hello from a promise\");\n  return (\n    <>\n      <div>{text}</div>\n      <button onClick={() => setText(\"Hello World\")}>\n        Click to set the text\n      </button>\n    </>\n  );\n}\n"],
-  "mappings": "+CAAA,MAAgC,OAEjB,YAA0B,CACvC,GAAM,CAAC,EAAM,GAAW,eAAS,wBACjC,MACE,iDACE,wBAAC,MAAD,KAAM,GACN,wBAAC,SAAD,CAAQ,QAAS,IAAM,EAAQ,gBAAgB",
-  "names": []
-}
